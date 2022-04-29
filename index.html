@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library project</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: .1fr;
+            text-align: center;
+            min-height: 100vh;
+        }
+        .books, .card {
+            background-color: white;
+            color: black;
+            text-align: center;
+            height: 400px;
+            display: grid;
+        }
+        .books {
+            background-color: beige;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-column: 2 / 3;
+            gap: 10px;
+            padding: 15px;
+            height: fit-content;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-heading">
+            <h1>Add book to library</h1>
+        </div>
+        <div class="books-heading">
+            <h1>Current books in library</h1>
+        </div>
+        <div class="form">
+            <h1>Test form info</h1>
+        </div>
+        <div class="books">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
