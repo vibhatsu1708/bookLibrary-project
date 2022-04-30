@@ -40,6 +40,7 @@ function displayBooksOnPage () {
                 const para = document.createElement ("p");
                 para.textContent = (`${key}: ${myLibrary[key]}`);
                 card.appendChild (para);
+                
             }
         }
     )   
