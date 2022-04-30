@@ -21,7 +21,7 @@ function Book(title, author, pages, read) {
 // loops through each and every book input given. The new div card is create that holds the information on the books, such as,
 // title, author etc, now this card is added to the classList of cards, which is later in the next step added to the parent div,
 // books. An other for loop, loops through every key and value of the objects present in the constructor to print the details,
-// of the book on the screen in the card.
+// of the book on the screen in the card. 
 function addBookToLibrary (title, author, pages, read) {
     let book = new Book(title, author, pages, read);
     myLibrary.push(book);
@@ -42,21 +42,24 @@ function displayBooksOnPage () {
                 card.appendChild (para);
             }
         }
-    )
-    
+    )   
 }
 
-addBookToLibrary("the psychology of money", "morgan housel", "300", "read");
-addBookToLibrary("discrete mathematics", "v.k. balakrishnan", "361", "not read yet");
-addBookToLibrary("mathematical programming", "steven vajda", "290", "read");
-addBookToLibrary("methods of operations research", "philip m morse and george", "380", "not read yet");
-addBookToLibrary("the psychology of money", "morgan housel", "300", "read");
-addBookToLibrary("the psychology of money", "morgan housel", "300", "read");
-addBookToLibrary("the psychology of money", "morgan housel", "300", "read");
+// start event listener to add book to library.
+const addBookButton = document.querySelector (".add-book-button");
 
-console.log("End of array content", myLibrary);
 
-displayBooksOnPage();
+// addBookToLibrary("the psychology of money", "morgan housel", "300", "read");
+// addBookToLibrary("discrete mathematics", "v.k. balakrishnan", "361", "not read yet");
+// addBookToLibrary("mathematical programming", "steven vajda", "290", "read");
+// addBookToLibrary("methods of operations research", "philip m morse and george", "380", "not read yet");
+// addBookToLibrary("the psychology of money", "morgan housel", "300", "read");
+// addBookToLibrary("the psychology of money", "morgan housel", "300", "read");
+// addBookToLibrary("the psychology of money", "morgan housel", "300", "read");
+
+// console.log("End of array content", myLibrary);
+
+// displayBooksOnPage();
 
 // const book1 = new Book("life of turing", "alan turing", 245, "not read yet");
 // console.log(book1.info());

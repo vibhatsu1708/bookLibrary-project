@@ -42,7 +42,21 @@
             <h1>Current books in library</h1>
         </div>
         <div class="form">
-            <h1>Test form info</h1>
+            <button class="add-book-button">add new book</button>
+            <div class="add-book-form" style="display: none;">
+                <form id="add-book">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="Title">
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="Author">
+                    <label for="pages-number">Pages:</label>
+                    <input type="number" id="pages-number" name="Pages-number">
+                    <label for="read">Read:</label>
+                    <input type="text" id="read" name="Read">
+                </form>
+                <button type="submit" class="submit-button">submit to library</button>
+                <button type="reset" class="reset-button">reset library</button>
+            </div>
         </div>
         <div class="books">
         </div>
