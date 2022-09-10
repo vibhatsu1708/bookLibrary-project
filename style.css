@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 :root {
@@ -16,7 +17,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    background-color: var(--bodyBgColor);
 }
 
 #container {
@@ -37,7 +38,7 @@ body {
     gap: 10px;
     border-radius: 10px;
 }
-#bookForm > input {
+#bookForm > input[type=text],#bookForm > input[type=number]{
     outline: none;
     border: none;
     background-color: var(--inputBgColor);
@@ -51,6 +52,23 @@ body {
     text-transform: capitalize;
     color: var(--inputTxtColor);
     opacity: 0.6;
+}
+#bookReadStatus {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    background-color: var(--inputBgColor);
+    color: var(--inputTxtColor);
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+input[type=radio] {
+    cursor: pointer;
 }
 #addbookButton {
     font-size: 1.5rem;

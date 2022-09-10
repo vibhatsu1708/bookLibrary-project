@@ -14,9 +14,18 @@
             <input type="text" name="bookTitle" id="bookTitle" placeholder="book title">
             <input type="text" name="bookAuthor" id="bookAuthor" placeholder="book author">
             <input type="number" name="bookPages" id="bookPages" placeholder="book pages">
-            <input type="text" name="bookRead" id="bookRead" placeholder="book read">
+            <div id="bookReadStatus">
+                <label id="bookReadLabel">Read status</label>
+                <div id="readRadioButtons">
+                    <input type="radio" name="bookRead" id="bookRead" value="yes">
+                    <input type="radio" name="bookRead" id="bookRead" value="no">
+                </div>
+            </div>
             <button id="addbookButton">add book</button>
         </form>
+        <div id="library">
+            
+        </div>
     </div>
 </body>
 </html>
