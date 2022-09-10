@@ -5,19 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>Book Library Project</title>
+    <script src="script.js" defer></script>
+    <title>Book Library project</title>
 </head>
 <body>
     <div id="container">
-        <div id="library-card">
-            <input type="text" name="book-name" class="bookName" id="bookName" placeholder="book name">
-            <input type="text" name="author-name" class="authorName" id="authorName" placeholder="author name">
-            <input type="text" name="language" class="language" id="language" placeholder="language">
-            <input type="number" name="numberPages" class="numberPages" id="numberPages" placeholder="number of pages">
-            <input type="text" name="readStatus" class="readStatus" id="readStatus" placeholder="read?">
-            <button id="addBookButton" class="addBookButton">add</button>
-        </div>
+        <form id="bookForm">
+            <input type="text" name="bookTitle" id="bookTitle" placeholder="book title">
+            <input type="text" name="bookAuthor" id="bookAuthor" placeholder="book author">
+            <input type="number" name="bookPages" id="bookPages" placeholder="book pages">
+            <input type="text" name="bookRead" id="bookRead" placeholder="book read">
+            <button id="addbookButton">add book</button>
+        </form>
     </div>
 </body>
 </html>

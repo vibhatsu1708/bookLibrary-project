@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,58 +6,61 @@
 }
 
 :root {
-    --libraryCardBgColor: #EFF6E0;
-    --libraryCardBorderColor: #373737;
-    --bodyBgcolor: #F4F4F8;
-    --inputTypeBgColor: #373737;
-    --inputTypeColor: #F4F4F8;
-    --addBookButtonBgColor: #FED766;
-    --addBookButtonColor: #373737;
+    --bodyBgColor: #F1F2F6;
+    --formBgColor: #AEB8FE;
+    --inputBgColor: #758BFD;
+    --inputTxtColor: #F1F2F6;
+    --inputPlaceholderTxtColor: #c4c4c6;
+    --addBookButtonBgColor: #0C1821;
+    --addBookButtonTxtColor: #F1F2F6;
 }
 
 body {
-    background-color: var(--bodyBgcolor);
+    font-family: 'Poppins', sans-serif;
 }
 
 #container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
-#library-card {
-    background-color: var(--libraryCardBgColor);
+#bookForm {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 10px;
+    background-color: var(--formBgColor);
     padding: 20px;
-    border: 6px solid var(--libraryCardBorderColor);
-    border-radius: 20px;
+    gap: 10px;
+    border-radius: 10px;
 }
-
-.bookName, .authorName, .language, .numberPages, .readStatus {
-    border: none;
+#bookForm > input {
     outline: none;
-    background-color: var(--inputTypeBgColor);
-    color: var(--inputTypeColor);
-    width: 40vw;
-    font-size: 1.2rem;
+    border: none;
+    background-color: var(--inputBgColor);
+    color: var(--inputTxtColor);
+    font-size: 1.3rem;
+    font-weight: 600;
     padding: 10px 20px;
     border-radius: 10px;
 }
-.addBookButton {
-    border: none;
-    outline: none;
-    background-color: var(--addBookButtonBgColor);
-    color: var(--addBookButtonColor);
-    font-size: 1.3rem;
+#bookForm > input::placeholder {
+    text-transform: capitalize;
+    color: var(--inputTxtColor);
+    opacity: 0.6;
+}
+#addbookButton {
+    font-size: 1.5rem;
     font-weight: 600;
-    padding: 15px 30px;
+    text-transform: uppercase;
+    background-color: var(--addBookButtonBgColor);
+    color: var(--addBookButtonTxtColor);
+    border: none;
+    width: 100%;
+    padding: 20px 40px;
     border-radius: 20px;
-    width: 40vw;
     cursor: pointer;
 }
