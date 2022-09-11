@@ -1,45 +1,66 @@
-let bookTitle = document.getElementById('bookTitle');
-let bookAuthor = document.getElementById('bookAuthor');
-let bookPages = document.getElementById('bookPages');
-let bookRead = document.getElementById('bookRead');
-let library = document.getElementById('library');
-let container = document.getElementById('container');
+const addBookButton = document.getElementById('addbookButton');
+const libraryDiv = document.getElementById('libraryDiv');
+const form = document.getElementById('bookForm');
+const bookTitle = document.getElementById('bookTitle');
+const bookAuthor = document.getElementById('bookAuthor');
+const bookPages = document.getElementById('bookPages');
 
-// Array to store the objects 
-let myLibrary = [];
+window.addEventListener (
+    'load', function () {
+        const libraryDiv = document.getElementById('libraryDiv');
+        const form = document.getElementById('bookForm');
+        const bookTitle = document.getElementById('bookTitle');
+        const bookAuthor = document.getElementById('bookAuthor');
+        const bookPages = document.getElementById('bookPages');
 
-// variable to reference the form
-let bookForm = document.getElementById('bookForm');
+        addBookButton.addEventListener (
+            'click', function (e) {
+                e.preventDefault();
 
-// function to take user input
-function addBook (e) {
-    // prevents the form submitting itself and resetting all the stored data.
-    e.preventDefault();
+                const title = bookTitle.value;
+                const author = bookAuthor.value;
+                const pages = bookPages.value;
+            
+                if (title == "" || author == "" || pages == "") {
+                    window.alert("Enter valid data!");
+                }
+                else {
+                    const bookCardDiv = document.createElement('div');
+                    const deleteDivButton = document.createElement('button');
+            
+                    bookCardDiv.classList.add('bookCard');
+                    deleteDivButton.classList.add('deleteDivButton');
+            
+                    const bookTitleDiv = document.createElement('div');
+                    const bookAuthorDiv = document.createElement('div');
+                    const bookPagesDiv = document.createElement('div');
+            
+                    bookTitleDiv.classList.add('bookInput');
+                    bookAuthorDiv.classList.add('bookInput');
+                    bookPagesDiv.classList.add('bookInput');
+            
+                    bookTitleDiv.textContent = title;
+                    bookAuthorDiv.textContent = author;
+                    bookPagesDiv.textContent = pages;
+                    deleteDivButton.textContent = "delete book";
+            
+                    bookCardDiv.appendChild(bookTitleDiv);
+                    bookCardDiv.appendChild(bookAuthorDiv);
+                    bookCardDiv.appendChild(bookPagesDiv);
+                    bookCardDiv.appendChild(deleteDivButton);
+            
+                    libraryDiv.appendChild(bookCardDiv);
+            
+                    form.reset();
 
-    let book = {
-        bookTitle: bookTitle.value,
-        bookAuthor: bookAuthor.value,
-        bookPages: bookPages.value,
-        bookRead: document.querySelector('input[name="bookRead"]:checked').value
+                    deleteDivButton.addEventListener (
+                        'click', function () {
+                            libraryDiv.removeChild(bookCardDiv);
+                        }
+                    );
+                }
+            }
+        );
     }
-    myLibrary.push(book);
-    bookForm.reset();
-    console.log({myLibrary});
-    displayBook({myLibrary});
-}
+);
 
-function displayBook ({myLibrary}) {
-    for (let i=0; i<myLibrary.length; i++) {
-        let para = document.createElement('p');
-        para.textContent = JSON.stringify((myLibrary, '\t', 2) + '\n');
-        para.classList.add('para');
-        library.appendChild(para);
-        container.appendChild(library);
-    }
-}
-
-document.addEventListener (
-    "DOMContentLoaded", function () {
-        document.getElementById('addbookButton').addEventListener("click", addBook);
-    }
-)
