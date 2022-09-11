@@ -95,22 +95,30 @@ header {
     cursor: pointer;
 }
 
-#libraryDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 2vh;
-    position: relative;
-    top: 10vh;
-    padding-bottom: 5vh;
-    z-index: 1;
-}
 #libraryHeader {
     font-size: 2rem;
     text-transform: capitalize;
     font-weight: 600;
     color: var(--bookCardInputTxtColor);
+    margin-bottom: 5vh;
+    z-index: 3;
+}
+#libraryDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 10vh;
+    padding-bottom: 5vh;
+    z-index: 1;
+}
+#libraryDivBooks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 2vh;
 }
 .bookCard {
     display: flex;
