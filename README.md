@@ -1,5 +1,8 @@
 # bookLibrary-project
-Title - Book Library
+View the project <a href="https://vibhatsu08.github.io/bookLibrary-project/">here</a>
+</br>
+Title - Book Library </br>
+</br>
 ProjectLog[0] - Restarting the project from fresh, and will be finishing it for real this time. </br>
 ProjectLog[1] - Set up the HTML, CSS and the JS file for the project. </br>
 ProjectLog[2] - Completed setting up user input that takes in data from a form and stores it in objects, which later is stored in an array. </br>
