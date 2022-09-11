@@ -50,7 +50,7 @@ window.addEventListener (
 
                     deleteDivButton.addEventListener (
                         'click', function () {
-                            libraryDiv.removeChild(bookCardDiv);
+                            libraryDivBooks.removeChild(bookCardDiv);
                         }
                     );
                 }
