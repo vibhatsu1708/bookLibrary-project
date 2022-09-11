@@ -14,18 +14,26 @@
     --inputPlaceholderTxtColor: #c4c4c6;
     --addBookButtonBgColor: #0C1821;
     --addBookButtonTxtColor: #F1F2F6;
+
+    --bookCardBgColor: #F3DE8A;
+    --bookCardInputBgColor: #272838;
+    --bookCardInputTxtColor: #F9F8F8;
+    --deleteBookButton: #ED474A;
 }
 
 body {
-    background-color: var(--bodyBgColor);
+    /* background-color: var(--bodyBgColor); */
+    background: linear-gradient(to bottom right, #46494C, #35373a);
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-position: center;
 }
 
 #container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
 }
 
 #bookForm {
@@ -33,14 +41,19 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 45vw;
     background-color: var(--formBgColor);
     padding: 20px;
     gap: 10px;
     border-radius: 10px;
+    position: sticky;
+    top: 5vh;
+    margin-bottom: 3vh;
 }
 #bookForm > input[type=text],#bookForm > input[type=number]{
     outline: none;
     border: none;
+    width: 100%;
     background-color: var(--inputBgColor);
     color: var(--inputTxtColor);
     font-size: 1.3rem;
@@ -53,28 +66,60 @@ body {
     color: var(--inputTxtColor);
     opacity: 0.6;
 }
-#bookReadStatus {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    background-color: var(--inputBgColor);
-    color: var(--inputTxtColor);
-    font-size: 1.3rem;
-    font-weight: 600;
-    text-transform: capitalize;
-    padding: 10px 20px;
-    border-radius: 10px;
-}
-input[type=radio] {
-    cursor: pointer;
-}
 #addbookButton {
     font-size: 1.5rem;
     font-weight: 600;
     text-transform: uppercase;
     background-color: var(--addBookButtonBgColor);
+    color: var(--addBookButtonTxtColor);
+    border: none;
+    width: 100%;
+    padding: 20px 40px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#libraryDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+    position: relative;
+    top: 10vh;
+    padding-bottom: 5vh;
+}
+#header {
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: var(--bookCardInputTxtColor);
+}
+.bookCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vh;
+    width: 40vw;
+    background-color: var(--bookCardBgColor);
+    padding: 20px;
+    border-radius: 10px;
+}
+.bookInput {
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    background-color: var(--bookCardInputBgColor);
+    color: var(--bookCardInputTxtColor);
+    border-radius: 10px;
+}
+.deleteDivButton {
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: var(--deleteBookButton);
     color: var(--addBookButtonTxtColor);
     border: none;
     width: 100%;
