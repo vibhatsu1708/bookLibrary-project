@@ -7,6 +7,9 @@
 }
 
 :root {
+    --headerBgColor: #F4EBD9;
+    --headerTxtColor: #272838;
+
     --bodyBgColor: #F1F2F6;
     --formBgColor: #AEB8FE;
     --inputBgColor: #758BFD;
@@ -29,6 +32,17 @@ body {
     background-position: center;
 }
 
+header {
+    background-color: var(--headerBgColor);
+    color: var(--headerTxtColor);
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: sticky;
+}
+
 #container {
     display: flex;
     justify-content: space-around;
@@ -41,14 +55,15 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 45vw;
+    width: 55vw;
     background-color: var(--formBgColor);
     padding: 20px;
     gap: 10px;
     border-radius: 10px;
     position: sticky;
-    top: 5vh;
+    top: 15vh;
     margin-bottom: 3vh;
+    z-index: 2;
 }
 #bookForm > input[type=text],#bookForm > input[type=number]{
     outline: none;
@@ -88,8 +103,9 @@ body {
     position: relative;
     top: 10vh;
     padding-bottom: 5vh;
+    z-index: 1;
 }
-#header {
+#libraryHeader {
     font-size: 2rem;
     text-transform: capitalize;
     font-weight: 600;
@@ -101,7 +117,7 @@ body {
     align-items: center;
     flex-direction: column;
     gap: 1vh;
-    width: 40vw;
+    width: 50vw;
     background-color: var(--bookCardBgColor);
     padding: 20px;
     border-radius: 10px;
@@ -126,4 +142,46 @@ body {
     padding: 20px 40px;
     border-radius: 20px;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+    #bookForm {
+        width: 65vw;
+        top: 15vh;
+        margin-bottom: 2vh;
+    }
+    .bookCard {
+        width: 60vw;
+    }
+}
+@media only screen and (max-width: 800px) {
+    header {
+        font-size: 2.2rem;
+    }
+    #bookForm {
+        width: 75vw;
+    }
+    .bookCard {
+        width: 70vw;
+    }
+}
+@media only screen and (max-width: 500px) {
+    header {
+        font-size: 1.8rem;
+    }
+    #bookForm {
+        width: 85vw;
+    }
+    .bookCard {
+        width: 80vw;
+    }
+}
+@media only screen and (max-wdith: 343px) {
+    header {
+        font-size: 1.5rem;
+    }
+    #bookForm {
+        margin-top: 40vh;
+        margin-bottom: 2vh;
+    }
 }
