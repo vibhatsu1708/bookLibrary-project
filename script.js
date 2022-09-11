@@ -1,5 +1,6 @@
 const addBookButton = document.getElementById('addbookButton');
 const libraryDiv = document.getElementById('libraryDiv');
+const libraryDivBooks = document.getElementById('libraryDivBooks');
 const form = document.getElementById('bookForm');
 const bookTitle = document.getElementById('bookTitle');
 const bookAuthor = document.getElementById('bookAuthor');
@@ -7,12 +8,6 @@ const bookPages = document.getElementById('bookPages');
 
 window.addEventListener (
     'load', function () {
-        const libraryDiv = document.getElementById('libraryDiv');
-        const form = document.getElementById('bookForm');
-        const bookTitle = document.getElementById('bookTitle');
-        const bookAuthor = document.getElementById('bookAuthor');
-        const bookPages = document.getElementById('bookPages');
-
         addBookButton.addEventListener (
             'click', function (e) {
                 e.preventDefault();
@@ -48,8 +43,8 @@ window.addEventListener (
                     bookCardDiv.appendChild(bookAuthorDiv);
                     bookCardDiv.appendChild(bookPagesDiv);
                     bookCardDiv.appendChild(deleteDivButton);
-            
-                    libraryDiv.appendChild(bookCardDiv);
+
+                    libraryDivBooks.appendChild(bookCardDiv);
             
                     form.reset();
 
