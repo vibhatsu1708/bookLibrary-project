@@ -11,3 +11,4 @@ ProjectLog[4] - Working on the bug, here the elements before the new elements ar
 ProjectLog[5] - Completed the project for desktop version, the form takes in user input, and the books are displayed in a vertical/column direction, with each card having a delete button, when pressed would delete that particular child from the parent div. </br>
 ProjectLog[6] - Implemented form validation in the project. </br>
 ProjectLog[7] - Made the project responsive, works on all screen sizes. </br>
+ProjectLog[8] - Changed the UI a bit, now the books appear with the newest at the top, instead of earlier when the newer books/book entries would appear at the bottom. </br>
