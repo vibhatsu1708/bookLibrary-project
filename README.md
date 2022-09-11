@@ -12,3 +12,4 @@ ProjectLog[5] - Completed the project for desktop version, the form takes in use
 ProjectLog[6] - Implemented form validation in the project. </br>
 ProjectLog[7] - Made the project responsive, works on all screen sizes. </br>
 ProjectLog[8] - Changed the UI a bit, now the books appear with the newest at the top, instead of earlier when the newer books/book entries would appear at the bottom. </br>
+ProjectLog[9] - Forgot to change the variable for deleting the child div from the parent container, earlier was unable to delete a particular div from the parent container, fixed it. </br>
